@@ -22,7 +22,7 @@
         <li class="nav-item active"><a class="nav-link" href="{% url 'teacher_hub' %}">Teacher Hub</a></li>
         {% endif %}
         {% if user.is_authenticated and user.is_student %}
-        <li class="nav-item active"><a class="nav-link" href="#">Student Hub</a></li>
+        <li class="nav-item active"><a class="nav-link" href="{% url 'student_hub' %}">Student Hub</a></li>
         {% endif %}
         
       </ul>

@@ -7,6 +7,7 @@
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
@@ -75,7 +76,7 @@
 </head>
 <body>
 
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{% url 'index' %}">ClassTrail</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -103,30 +104,51 @@
     </div>
   </nav>
 
-    <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 mx-auto">
-              <div class="card">
- 
+    <div class="jumbotron">
+        <div class="container text-center">
+          <h1>{{ user.get_username }}'s StudentHub</h1>      
+        </div>
+    </div>
+  
+      <div class="container-fluid bg-3 text-center">    
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+     
                 <div class="card-body">
-                    <div class="row">
-                       <div class="col-lg-6">
-                         {% if user.is_authenticated%}
-                         <h2>Welcome {{ user.first_name }}</h2>
-                       {% endif %}
-                      </div>
-                       <div class="col-lg-6">
-                       </div>
-                    </div>
-                  </form>
+                    <a href="#" class="card-title btn btn-primary stretched-link"><h5>ClassTrail</h5></a>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
-            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3"> 
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <a href="#" class="card-title btn btn-primary stretched-link"><h5>View Classes</h5></a>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3"> 
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <a href="#" class="card-title btn btn-primary stretched-link"><h5>View Grades</h5></a>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                  <a href="#" class="card-title btn btn-primary stretched-link"><h5>Work Feed</h5></a>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
           </div>
         </div>
-      </section>
-  
+      </div><br>
+      
+      </div><br><br>
 
 
 </body>

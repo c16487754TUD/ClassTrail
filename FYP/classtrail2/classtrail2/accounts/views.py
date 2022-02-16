@@ -13,6 +13,9 @@ def register(request):
 def teacher_hub(request):
     return render(request, '../templates/teacher_hub.html')
 
+def student_hub(request):
+    return render(request, '../templates/student_hub.html')
+
 def manage_classes(request):
     return render(request, '../templates/manage_classes.html')
 
