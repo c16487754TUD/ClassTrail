@@ -6,12 +6,14 @@ from .models import Teacher, Student, User
 class TeacherSignUpForm(UserCreationForm):
     first_name = forms.CharField(required=True)
     last_name = forms.CharField(required=True)
-    teacher_name = forms.CharField(required=True)
+    #teacher_name = forms.CharField(required=True)
 
     class Meta(UserCreationForm.Meta):
         model = User
         #fields = ['first_name', 'last_name', 'teacher_name']
 
+    field_order = ['username','first_name', 'last_name', 'password1', 'password2']
+    
     @transaction.atomic #if block of code succesfully run, changes are saved. Changes rolled back if there is an exception
     def save(self):
         user = super().save(commit=False)
@@ -27,11 +29,12 @@ class TeacherSignUpForm(UserCreationForm):
 class StudentSignUpForm(UserCreationForm):
     first_name = forms.CharField(required=True)
     last_name = forms.CharField(required=True)
-    student_name = forms.CharField(required=True)
+    #student_name = forms.CharField(required=True)
 
     class Meta(UserCreationForm.Meta):
         model = User
         #fields = ['first_name', 'last_name', 'student_name']
+    field_order = ['username','first_name', 'last_name', 'password1', 'password2']
 
     @transaction.atomic #if block of code succesfully run, changes are saved. Changes rolled back if there is an exception
     def save(self):
