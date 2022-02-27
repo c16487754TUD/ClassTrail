@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'classtrail2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ClassTrailDB',
+        'NAME': 'ClassTrail_DB',
         'USER' : 'postgres',
         'PASSWORD' : 'LLqaz',
         'HOST' : 'localhost',
